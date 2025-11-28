@@ -1,0 +1,37 @@
+-- ds.site-page: Petmate
+inset: $ds.spaces.inset-square.zero
+spacing: $ds.spaces.vertical-gap.zero
+theme-switcher: false
+document-title: Petmate
+document-description: Your Trusted Pet Sitter for Happy and Healthy Pets
+document-image: https://petmate.fifthtry.site/-/petmate.fifthtry.site/assets/og-image.png
+
+	/-- ftd.column:
+	anchor: window
+	right.px: 24
+	bottom.px: 44
+	z-index: 99999999999999
+	
+	-- ds.icon-button: Let's Chat!
+	link: /
+	icon: $assets.files.assets.chat.svg
+	size: large
+	rounded: true
+
+	-- end: ftd.column
+
+
+	-- hero.hero-right-hug: About PetMate
+	image: $assets.files.assets.about-dog.jpg
+	primary-cta: Discover More
+	primary-cta-link: /services/
+	top: true
+
+	PetMate is dedicated to providing a safe and nurturing environment for
+	your pets while you're away. Our professional pet sitting services are
+	designed to offer companionship, exercise, and personalized care for
+	your furry friends. With options for hourly sitting, day care,
+	overnight care, and extended care, we prioritize your pet's well-being
+	and ensure a reliable and trustworthy experience.
+
+-- end: ds.site-page

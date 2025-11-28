@@ -1,0 +1,25 @@
+-- component footer:
+ftd.image-src footer-logo:
+string copyright:
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+spacing.fixed.px if { ftd.device == "mobile" }: 48
+padding-horizontal.px: 80
+padding-vertical.px: 40
+align-content: left
+padding-horizontal.px if { ftd.device == "mobile" }: 24
+padding-vertical.px if { ftd.device == "mobile" }: 60
+background.solid: $ds.colors.background.step-1
+
+-- ftd.image:
+src: $footer.footer-logo
+width: fill-container
+link: /
+
+-- ds.copy-small: $footer.copyright
+
+-- end: ftd.row
+
+-- end: footer

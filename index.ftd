@@ -1,0 +1,103 @@
+-- ds.site-page: Petmate
+inset: $ds.spaces.inset-square.zero
+spacing: $ds.spaces.vertical-gap.zero
+theme-switcher: false
+document-title: Petmate
+document-description: Your Trusted Pet Sitter for Happy and Healthy Pets
+document-image: https://petmate.fifthtry.site/-/petmate.fifthtry.site/assets/og-image.png
+
+	/-- ftd.column:
+	anchor: window
+	right.px: 24
+	bottom.px: 44
+	z-index: 99999999999999
+	
+	-- ds.icon-button: Let's Chat!
+	link: /
+	icon: $assets.files.assets.chat.svg
+	size: large
+	rounded: true
+
+	-- end: ftd.column
+
+-- ds.section-column:
+spacing: $ds.spaces.vertical-gap.zero
+margin: $ds.spaces.vertical-gap.zero
+
+-- hero.hero-right-hug: Your Trusted Pet Sitter for Happy and Healthy Pets
+image: $assets.files.assets.dog.avif
+primary-cta: Find Your Sitter
+primary-cta-link: /
+custom: true
+
+Connecting pet parents with trained sitters who provide loving care, tailored
+plans, and joyful playtime to keep your furry friends happy, healthy, and
+wagging every day
+
+-- about.about-us: About PetMate
+sub-title: Our Mission
+cta-text: Discover More
+cta-link: /about/
+
+At PetMate, we are committed to connecting pet parents with verified and
+trained sitters who prioritize your pet's well-being. With a focus on
+personalized care, exercise, and play, we offer various sitting options to
+ensure your pet is in safe and loving hands.
+
+-- card.image-scroll-card: BEST MATES
+image-1: $assets.files.assets.pet.jpg
+image-2: $assets.files.assets.best-mate-2.avif
+image-3: $assets.files.assets.best-mate-3.avif
+image-4: $assets.files.assets.best-mate-4.avif
+
+-- card.featured-card: PetMate Features
+sub-title-1: - Verified Sitters – Every sitter passes background and ID checks.
+sub-title-2: - Pet Lovers First – All sitters are trained and experienced with animals.
+sub-title-3: - Safe & Secure – 24/7 support available with live updates
+sub-title-4: - Peace of Mind – Transparent reviews and ratings by other pet parents.
+
+-- ftd.column:
+padding.px: 84
+padding-horizontal.px if { ftd.device == "mobile" }: 24
+padding-vertical.px if { ftd.device == "mobile" }: 60
+width: fill-container
+align-content: center
+background.solid: $ds.colors.background.step-1
+
+-- ds.heading-hero: How PetMate Works
+
+-- ds.row:
+wrap if { ftd.device == "mobile" }: true
+border: $ds.borders.bottom.small
+radius: $ds.radius.zero
+
+-- card.icon-card: Search for Sitters
+icon: $assets.files.assets.icon-1.svg
+
+-- card.icon-card: Personalized Care Plans
+icon: $assets.files.assets.icon-2.svg
+
+-- card.icon-card: Quality Time
+icon: $assets.files.assets.icon-1.svg
+
+-- end: ds.row
+
+-- ds.row:
+wrap if { ftd.device == "mobile" }: true
+
+-- card.icon-card: Play and Exercise
+icon: $assets.files.assets.icon-2.svg
+
+-- card.icon-card: Communication
+icon: $assets.files.assets.icon-1.svg
+
+-- card.icon-card: Support Network
+icon: $assets.files.assets.icon-2.svg
+
+-- end: ds.row
+
+-- end: ftd.column
+
+-- end: ds.section-column
+
+-- end: ds.site-page

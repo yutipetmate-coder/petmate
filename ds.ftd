@@ -1,0 +1,62 @@
+-- import: design-system.fifthtry.site
+export: *
+-- import: navbar.fifthtry.site as header
+-- import: petmate.fifthtry.site/footer as footer
+
+-- ftd.image-src site-logo: $assets.files.assets.logo.svg
+-- ftd.image-src footer-logo: $assets.files.assets.footer-logo.svg
+-- string site-url: /
+-- string copyright: Copyright 2025
+
+-- import: petmate.fifthtry.site/cs
+-- import: madefor-typography.fifthtry.site as madefor
+
+-- ftd.color-scheme colors: $cs.main
+-- ftd.type-data types: $madefor.types
+
+
+-- component site-header:
+
+-- ds.section-column:
+spacing: $ds.spaces.vertical-gap.zero
+margin: $ds.spaces.vertical-gap.zero
+
+-- header.header:
+site-url: /
+site-logo: $site-logo
+align-center: true
+sections: $header.sitemap.sections
+logo-width: 244
+align-right: true
+
+-- end: ds.section-column
+
+-- end: site-header
+
+
+
+
+
+-- component site-footer:
+
+-- ds.section-column:
+spacing: $ds.spaces.vertical-gap.zero
+margin: $ds.spaces.vertical-gap.zero
+
+-- footer.footer:
+footer-logo: $footer-logo
+copyright: $copyright
+
+-- end: ds.section-column
+
+-- end: site-footer
+
+
+
+
+
+
+-- ds.page-widths widths:
+regular.px: 1520
+narrow.px: 1320
+wide.px: 1820

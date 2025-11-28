@@ -1,0 +1,66 @@
+-- ds.site-page: Petmate
+inset: $ds.spaces.inset-square.zero
+spacing: $ds.spaces.vertical-gap.zero
+theme-switcher: false
+document-title: Petmate
+document-description: Your Trusted Pet Sitter for Happy and Healthy Pets
+document-image: https://petmate.fifthtry.site/-/petmate.fifthtry.site/assets/og-image.png
+
+	/-- ftd.column:
+	anchor: window
+	right.px: 24
+	bottom.px: 44
+	z-index: 99999999999999
+	
+	-- ds.icon-button: Let's Chat!
+	link: /
+	icon: $assets.files.assets.chat.svg
+	size: large
+	rounded: true
+
+	-- end: ftd.column
+
+	-- ftd.column:
+	spacing.fixed.px: 12
+	width: fill-container
+	padding.px: 70
+	padding.px if { ftd.device == "mobile" }: 24
+	align-content: center
+
+	-- ds.heading-hero: Our Services
+
+	-- end: ftd.column
+
+	-- ftd.row:
+	width: fill-container
+	wrap: true
+	spacing.fixed.px: 24
+	align-content: top-center
+	padding-horizontal.px if { ftd.device != "mobile" }: 70
+	padding-bottom.px: 70
+	padding.px if { ftd.device == "mobile" }: 24
+
+	-- card.service-card: Hourly Sitting
+	image: $assets.files.assets.image-1.avif
+	timing: 2 hr
+	price: ₹2,250
+	cta-text: Book Now
+	cta-link: /
+
+	-- card.service-card: Overnight Care
+	image: $assets.files.assets.image-2.avif
+	timing: 8 hr
+	price: ₹3,700
+	cta-text: Book Now
+	cta-link: /
+
+	-- card.service-card: Day Care
+	image: $assets.files.assets.image-3.avif
+	timing: 6 hr
+	price: ₹4,500
+	cta-text: Book Now
+	cta-link: /
+
+	-- end: ftd.row
+
+-- end: ds.site-page

@@ -1,0 +1,61 @@
+-- ds.site-page: Petmate
+inset: $ds.spaces.inset-square.zero
+spacing: $ds.spaces.vertical-gap.zero
+theme-switcher: false
+document-title: Petmate
+document-description: Your Trusted Pet Sitter for Happy and Healthy Pets
+document-image: https://petmate.fifthtry.site/-/petmate.fifthtry.site/assets/og-image.png
+
+	/-- ftd.column:
+	anchor: window
+	right.px: 24
+	bottom.px: 44
+	z-index: 99999999999999
+	
+	-- ds.icon-button: Let's Chat!
+	link: /
+	icon: $assets.files.assets.chat.svg
+	size: large
+	rounded: true
+
+	-- end: ftd.column
+
+	-- ftd.column:
+	spacing.fixed.px: 12
+	width: fill-container
+	padding.px: 70
+	padding.px if { ftd.device == "mobile" }: 24
+
+	-- ds.heading-hero: Services
+
+	What We Offer
+
+	-- end: ftd.column
+
+	-- card.align-card: Hourly Sitting
+	icon: $assets.files.assets.icon-1.svg
+	left: true
+
+	Our hourly sitting service provides pet parents with the flexibility to
+	schedule care for their pets based on their specific needs. Whether
+	it's for a few hours or the whole day, our trained sitters offer
+	companionship and attention to your pets in the comfort of their own home.
+
+    -- card.align-card: Day Care
+	icon: $assets.files.assets.icon-2.svg
+
+	For pet parents who need care for their pets during the day, our day care
+	service offers a safe and supervised environment for pets to play,
+	rest, and socialize while their owners are at work or running errands.
+	We ensure a fun and enriching experience for your furry friends.
+
+    -- card.align-card: Overnight Care
+	icon: $assets.files.assets.icon-1.svg
+	left: true
+
+	When pet parents are away overnight, our overnight care service provides a
+	trustworthy and secure option for pets to receive care, attention, and
+	companionship throughout the night. Our sitters ensure that your pets
+	feel safe, comfortable, and loved while you're away.
+
+-- end: ds.site-page

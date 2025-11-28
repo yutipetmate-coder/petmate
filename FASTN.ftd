@@ -1,0 +1,27 @@
+-- import: fastn
+
+-- fastn.package: petmate.fifthtry.site
+
+-- fastn.dependency: design-system.fifthtry.site
+provided-via: petmate.fifthtry.site/ds
+
+-- fastn.dependency: madefor-typography.fifthtry.site
+-- fastn.dependency: navbar.fifthtry.site
+-- fastn.dependency: hero.fifthtry.site
+-- fastn.dependency: about-us.fifthtry.site
+-- fastn.dependency: card.fifthtry.site
+
+-- fastn.auto-import: hero.fifthtry.site as hero
+-- fastn.auto-import: card.fifthtry.site as card
+-- fastn.auto-import: about-us.fifthtry.site as about
+-- fastn.auto-import: petmate.fifthtry.site/assets
+-- fastn.auto-import: design-system.fifthtry.site as ds
+
+
+-- fastn.sitemap:
+
+# Home: /
+# About: /about/
+# Services: /services/
+# Contact: /
+# Book Online: /book-online/
