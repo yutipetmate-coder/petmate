@@ -34,7 +34,7 @@ Connecting pet parents with trained sitters who provide loving care, tailored
 plans, and joyful playtime to keep your furry friends happy, healthy, and
 wagging every day
 
--- about.about-us: About PetMate
+-- about-us: About PetMate
 sub-title: Our Mission
 cta-text: Discover More
 cta-link: /about/
@@ -62,7 +62,7 @@ padding-horizontal.px if { ftd.device == "mobile" }: 24
 padding-vertical.px if { ftd.device == "mobile" }: 60
 width: fill-container
 align-content: center
-background.solid: $ds.colors.background.step-1
+background.solid: $inherited.colors.background.step-1
 
 -- ds.heading-hero: How PetMate Works
 
@@ -101,3 +101,57 @@ icon: $assets.files.assets.icon-2.svg
 -- end: ds.section-column
 
 -- end: ds.site-page
+
+
+
+
+
+
+-- component about-us:
+caption title:
+body body:
+string cta-text:
+string cta-link:
+string sub-title:
+
+-- ftd.row:
+width: fill-container
+background.solid: $inherited.colors.background.step-1
+padding-horizontal.px: 80
+padding-horizontal.px if { ftd.device == "mobile" }: 24
+padding-top.px: 80
+padding-bottom.px: 120
+wrap: true
+
+-- ftd.column:
+spacing.fixed.px: 24
+width.fixed.percent: 50
+width if { ftd.device == "mobile" }: fill-container
+
+-- ds.heading-hero: $about-us.title
+width.fixed.px if { ftd.device != "mobile" }: 300
+
+$about-us.sub-title
+
+-- end: ftd.column
+
+-- ftd.column:
+spacing.fixed.px: 24
+width.fixed.percent: 50
+width if { ftd.device == "mobile" }: fill-container
+margin-top.px if { ftd.device == "mobile" }: 12
+
+-- ds.copy-large:
+width.fixed.px if { ftd.device != "mobile" }: 470
+
+$about-us.body
+
+-- ds.primary-button: $about-us.cta-text
+link: $about-us.cta-link
+rounded: true
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: about-us
