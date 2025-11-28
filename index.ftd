@@ -71,13 +71,13 @@ wrap if { ftd.device == "mobile" }: true
 border: $ds.borders.bottom.small
 radius: $ds.radius.zero
 
--- card.icon-card: Search for Sitters
+-- icon-card: Search for Sitters
 icon: $assets.files.assets.icon-1.svg
 
--- card.icon-card: Personalized Care Plans
+-- icon-card: Personalized Care Plans
 icon: $assets.files.assets.icon-2.svg
 
--- card.icon-card: Quality Time
+-- icon-card: Quality Time
 icon: $assets.files.assets.icon-1.svg
 
 -- end: ds.row
@@ -85,13 +85,13 @@ icon: $assets.files.assets.icon-1.svg
 -- ds.row:
 wrap if { ftd.device == "mobile" }: true
 
--- card.icon-card: Play and Exercise
+-- icon-card: Play and Exercise
 icon: $assets.files.assets.icon-2.svg
 
--- card.icon-card: Communication
+-- icon-card: Communication
 icon: $assets.files.assets.icon-1.svg
 
--- card.icon-card: Support Network
+-- icon-card: Support Network
 icon: $assets.files.assets.icon-2.svg
 
 -- end: ds.row
@@ -155,3 +155,58 @@ rounded: true
 -- end: ftd.row
 
 -- end: about-us
+
+
+
+
+
+-- component icon-card:
+optional caption title:
+optional body body:
+optional ftd.image-src icon:
+boolean left-align: false
+optional ftd.background background:
+boolean back-shadow: false
+ftd.resizing width: fill-container
+ftd.shadow shadow: $ds.shadow.large
+optional string link:
+boolean big-icon: false
+boolean card-icon: false
+boolean dark: false
+
+-- ds.column:
+width: $icon-card.width
+min-height.fixed.px: 320
+width if { icon-card.title == NULL }: hug-content
+inset: $ds.spaces.inset-square.zero
+align-content if { icon-card.left-align }: left
+background if { icon-card.background }: $icon-card.background
+inset if { icon-card.background || icon-card.left-align }: $ds.spaces.inset-square.large
+radius if { icon-card.background }: $ds.radius.large
+shadow if { icon-card.back-shadow }: $icon-card.shadow
+link: $icon-card.link
+
+-- ftd.image:
+if: { icon-card.icon != NULL }
+src: $icon-card.icon
+width.fixed.px: 50
+height.fixed.px: 50
+width.fixed.px if { icon-card.card-icon }: 150
+height.fixed.px if { icon-card.card-icon }: 120
+width.fixed.px if { icon-card.big-icon }: 180
+
+-- ds.heading-medium: $icon-card.title
+if: { icon-card.title != NULL }
+align if { !icon-card.left-align }: center
+color if { icon-card.dark }: #ffffff
+color: $inherited.colors.text-strong
+
+-- ds.copy-regular: $icon-card.body
+if: { icon-card.body != NULL }
+align if { !icon-card.left-align }: center
+color if { icon-card.dark }: #ffffff
+color: $inherited.colors.text
+
+-- end: ds.column
+
+-- end: icon-card
